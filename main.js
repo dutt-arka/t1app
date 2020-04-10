@@ -11,7 +11,7 @@ $('#get-started').on('click', function () {
 // Fetch data for the course page from Google spreadsheet
 function init() {
     Tabletop.init({
-        key : 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSgsWxX2Gmzd_riovrUPPSB9jIMnmzNE3Hy1DfO5GqscDCQ8XvJ4rw_IlNP_FHpbDBjlQveFDX0-xy0/pubhtml',
+        key : 'https://docs.google.com/spreadsheets/d/15BaMOYQEGKa6uFX9IRr-FtkAUagBkzCb_9jHpmQps3A/edit?usp=sharing',
 
         callback: function (data, tabletop) {
             console.log(data)
