@@ -1,0 +1,307 @@
+/* 
+
+1. Design and code the site.
+2. Integrate a database. (Google Spreadsheet)
+3. Deploy the site. (Netlify, GitHub)
+4. Connect to main site? (vc101.team/#online-course)
+
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Asap');
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+
+/* COURSE PAGE */
+body {
+    background-color: rgb(245, 247, 248);
+    
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 80px;
+}
+
+header .header-brand {
+    display: block;
+    margin-top: 21px;
+    margin-bottom: 31px;
+    margin-left: 157px;
+    padding: 0px 20px 0px 40px;
+    border-right: 1px solid rgb(88, 112, 136);
+    float: left;
+}
+
+header img {
+    width: 50px;
+    height: 40px;
+}
+
+header nav ul {
+    display: block;
+    width: fit-content;
+    margin: 20px 0px 0px 20px;
+    float: left;
+}
+
+header nav ul li {
+    display: inline-block;
+    float: left;
+    list-style: none;
+    padding: 0 10px;
+}
+
+header nav ul li a {
+    font-family: 'Asap';
+    font-size: 16px;
+    color: #111;
+    line-height: 60px;
+}
+
+/*.welcome-text h1 {
+    margin-top: 130px;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3rem;
+    line-height: 1em;
+    text-align: center;
+    transform: translateY(-50%);
+    text-shadow: 0 1px 0 #e4adad, 0 2px 0 #e1a6a6, 0 3px 0 #df9e9e, 0 4px 0 #dc9696, 0 5px 0 #da8f8f, 0 6px 0 #d78787, 0 7px 0 #d58080, 0 8px 0 #d27878, 0 0 5px rgba(237, 154, 154, 0.05), 0 -1px 3px rgba(237, 154, 154, 0.2), 0 9px 9px rgba(237, 154, 154, 0.5), 0 12px 12px rgba(237, 154, 154, 0.5), 0 15px 15px rgba(237, 154, 154, 0.5);
+}*/
+
+.main {
+    width: 100%;
+    margin-top: 115px;
+}
+
+.container {
+    display: grid;
+    grid-template: 
+        "syllabus-outline data-content " auto
+        "chevron data-content" auto / 1fr 2fr;
+    padding: 20px;
+    width: 75%;
+    margin: 0 auto;
+    height: auto;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+
+.syllabus-outline {
+    grid-area: syllabus-outline;
+    border-right: 2px solid rgb(245, 247, 248);
+    background-color: #fff;
+    text-align: left;
+    border-radius: 2% 0% 0% 2%;
+    margin-left: 10px;
+}
+
+.syllabus-outline h2 {
+    font-size: 1.3rem;
+    color: #81DDE3;
+    font-family: 'Asap';
+    line-height: 25px;
+    margin: 10px 0 20px 0px;
+    border-bottom: 2px solid #F5E97A;
+    width: min-content;
+}
+
+
+.syllabus-outline ul li {
+    list-style: none;
+    font-family: 'Asap';
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: rgb(88, 112, 136);
+}
+
+.data-content {
+    grid-area: data-content;
+    background-color: #fff;
+    margin-left: 20px;
+}
+
+.data-content .gif {
+    width: 100%;
+    height: 300px;
+    pointer-events: none;
+    margin: 0 auto;
+}
+
+.data-content p {
+    font-family: 'Asap', sans-serif;
+    color: rgb(34, 33, 33);
+    float: left;
+    left: 77px;
+    margin-top: 20px;
+    width: 500px;
+    height: 50px;
+    font-size: 1.1rem;
+    line-height: 30px;
+}
+
+.chevron {
+    grid-area: chevron;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.chevron .left {
+    float: left;
+}
+    
+.chevron .right {
+    float: right;
+}
+
+.fa-chevron-left,
+.fa-chevron-right {
+    color: #EDD34A;
+    font-size: 2rem;
+    transition: all .3s;
+}
+
+.left:hover .fa-chevron-left,
+.right:hover .fa-chevron-right {
+    color: #F5E97A;
+    cursor: pointer;
+}
+
+
+
+/* FOOTER */
+footer {
+    margin-top: 30px;
+    border-top: 2px solid rgb(234, 239, 241);  
+}
+
+footer ul {
+    width: fit-content;
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 200px;
+    
+}
+
+footer ul li {
+    display: inline-flex;
+    list-style: none;
+    line-height: 40px;
+}
+
+footer ul li a {
+    font-family: 'Asap';
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: rgb(17, 51, 85);
+    margin-right: 20px;
+}
+
+.wrapper p {
+    text-align: center;
+    float: right;
+    margin-top: 30px;
+    margin-right: 170px;
+    font-family: 'Asap';
+    font-size: 0.9rem;
+}
+
+
+
+/* MEDIA QUERIES */
+
+/* Large Mobile Screen */
+@media only screen and (max-width: 580px) {
+    header .header-brand {
+        margin-left: 10px;
+    }
+    
+    header img {
+        width: 40px;
+        height: 30px;
+    }
+
+    header nav ul li {
+        margin-top: -10px;
+    }
+    
+    header nav ul li a {
+        font-size: 14px;
+    }
+
+    .container {
+        display: grid;
+        grid-template: 
+        "data-content" auto
+        "chevron" auto / 1fr;
+    }
+
+    .data-content {
+        grid-area: data-content;
+        margin: 0 auto;
+    }
+
+    .data-content .gif {
+        width: 100%;
+        border-radius: 2% 2% 0% 0%;
+    }
+
+    .data-content p {
+        width: 100%;
+        height: 120px;
+        line-height: 20px;
+        font-size: 0.9rem;
+    }
+
+    .chevron {
+        grid-area: chevron;
+        width: 260px;
+    }
+
+    .syllabus-outline {
+        display: none;
+    }
+
+    footer {
+        border: none;
+        margin-top: 80px;
+    }
+
+    footer ul {
+        margin-bottom: 10px;
+        margin-left: 50px;
+    }
+
+    footer ul li {
+        display: block;
+    }
+
+    footer ul li a {
+        font-size: 1.1rem;
+        margin-right: 20px;
+    }
+
+    .wrapper p {
+        float: left;
+        margin-top: 10px;
+        margin-left: 50px;
+        margin-bottom: 10px;
+    }
+}

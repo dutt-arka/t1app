@@ -1,0 +1,386 @@
+/* 
+
+1. Design and code the site. 
+2. Integrate a database. (Google Spreadsheet)
+3. Deploy the site. (Netlify, GitHub)
+4. Connect to main site? (vc101.team/#online-course)
+
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Asap');
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+
+/* BUTTON CLASS */
+.btn {
+    height: 58px;
+    font-size: 16px;
+    font-family: 'Asap';
+    padding: 10px 16px;
+    color: #94757E;
+    background-color: #F5E97A;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    border-image: initial;
+    position: relative;
+    width: auto;
+    font-weight: 600;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 1000ms;
+}
+
+
+/* INDEX PAGE */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #fff;
+    max-width: 960px; /* Same as main */
+    height: 80px;
+    margin: 0 auto;
+}
+
+header .header-brand {
+    display: block;
+    margin-top: 21px;
+    margin-bottom: 31px;
+    padding: 0px 20px 0px 40px;
+    border-right: 1px solid rgb(88, 112, 136);
+    float: left;
+}
+
+header img {
+    width: 50px;
+    height: 40px;
+}
+
+header nav ul {
+    display: block;
+    width: fit-content;
+    margin: 20px 0px 0px 20px;
+    float: left;
+}
+
+header nav ul li {
+    display: inline-block;
+    float: left;
+    list-style: none;
+    padding: 0 10px;
+}
+
+header nav ul li a {
+    font-family: 'Asap';
+    font-size: 16px;
+    color: #111;
+    line-height: 60px;
+}
+
+main {
+    padding-top: 100px;
+    max-width: 960px; /* 960 looks ok on laptops and wide desktops */
+    margin: 0 auto; /* horizontally center this div */
+    padding-left: 40px; /* If the screen width is less than 960, this gives a bit of space */
+    padding-right: 40px;
+}
+
+.landing-box {
+    min-height: calc(100vh - 80px);
+}
+
+.landing-box img {
+    position: absolute;
+    display: block;
+    top: 200px;
+    right: 170px;
+    width: 48%;
+    height: 430px;
+    background-size: cover;
+    background-position: left center; 
+    z-index: -1;  
+}
+
+.landing-box h1,
+.landing-box h2 {
+    font-family: 'Asap';
+    font-size: 54px;
+    color: #81DDE3;
+    line-height: 64px;
+    margin: 13px 0px;
+}
+
+.landing-box h1 {
+    font-weight: 100;
+}
+
+.landing-box h2 {
+    font-weight: 900;
+}
+
+.landing-box p {
+    color: rgb(34, 33, 33);
+    line-height: 24px;
+    font-size: 16px;
+    font-family: 'Asap';
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-weight: 400;
+    width: 300px;
+}
+
+.landing-box a:hover {
+    background-color: #EDD34A;
+}
+
+.lesson-box {
+    min-height: calc(100vh - 80px);
+    padding-top: 80px;
+}
+
+.lesson-box h1 {
+    font-size: 40px;
+    font-weight: 400;
+    font-family: 'Asap';
+    color: #81DDE3;
+    line-height: 64px;
+}
+
+.lesson-box p {
+    color: rgb(34, 33, 33);
+    line-height: 24px;
+    font-size: 1rem;
+    font-family: 'Asap';
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+.lesson-one {
+    display: grid;
+    grid-template: 
+    "img lesson-content" min-content
+    "img a" auto / 1fr 1fr;
+    width: 100%;
+    height: auto;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(231, 235, 238);
+    border-image: initial;
+    background: rgb(255, 255, 255);
+    border-radius: 8px;
+    transition: box-shadow .3s;
+}
+
+.lesson-one:hover {
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+}
+
+.lesson-one img {
+    grid-area: img;
+    border-radius: 2% 0% 0% 2%;
+}
+
+.lesson-one .lesson-content {
+    grid-area: lesson-content;
+    margin-left: 1rem;
+    margin-top: 2rem;
+}
+
+.lesson-one h2 {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: #000;
+    font-family: 'Asap';
+}
+
+.lesson-one p {
+    font-size: 1rem;
+    color: rgb(88, 112, 136);
+    font-family: 'Asap';
+    margin-top: 10px;
+    margin-right: 1rem;
+}
+
+.lesson-one a {
+    grid-area: a;
+    width: 80px;
+    height: 48px;
+    margin-left: 16px;
+    margin-top: 80px;
+    transition: all 1000ms;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 17px;
+    padding-right: 10px;
+    letter-spacing: 2px;
+}
+
+.lesson-one a:hover {
+    background-color: #EDD34A;
+}
+
+
+
+/* FOOTER */
+footer {
+    border-top: 2px solid rgb(245, 247, 248);
+}
+
+footer ul {
+    width: fit-content;
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 200px;
+}
+
+footer ul li {
+    display: inline-flex;
+    list-style: none;
+    line-height: 40px;
+}
+
+footer ul li a {
+    font-family: 'Asap';
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: rgb(17, 51, 85);
+    margin-right: 20px;
+}
+
+.wrapper p {
+    text-align: center;
+    float: right;
+    margin-top: 30px;
+    margin-right: 170px;
+    font-family: 'Asap';
+    font-size: 0.9rem;
+}
+
+
+
+/* MEDIA QUERIES */
+
+/* Phablets / Large Mobile Screen */
+@media only screen and (max-width: 780px) {
+    
+    header img {
+        width: 40px;
+        height: 30px;
+    }
+
+    header nav ul li {
+        margin-top: -10px;
+    }
+    
+    header nav ul li a {
+        font-size: 14px;
+    }
+
+    main {
+        padding-top: 80px;
+    }
+    
+    .landing-box img {
+        top: 280px;
+        right: 0px;
+        width: 100%;
+        height: 50%;
+    }
+
+    .landing-box h1 {
+        font-size: 49px;
+        margin: 13px 0px;
+        line-height: 60px;
+    }
+
+    .lesson-box h1 {
+        font-size: 1.8rem;
+        line-height: 40px;
+        margin-bottom: 10px;
+    }
+
+    .lesson-box p {
+        width: 70%;
+    }
+
+    .lesson-one {
+        display: grid;
+        grid-template: 
+        "img" min-content
+        "lesson-content" auto
+        "a" auto / 1fr;
+    }
+
+    .lesson-one img {
+        grid-area: img;
+        border-radius: 2% 2% 0% 0%;
+        width: 100%;
+    }
+
+    .lesson-one .lesson-content {
+        grid-area: lesson-content;
+        margin-left: 16px;
+        margin-top: 32px;
+    }
+
+    .lesson-one h2 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .lesson-one a {
+        grid-area: a;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    footer {
+        border: none;
+        margin-top: 80px;
+    }
+
+    footer ul {
+        margin-bottom: 10px;
+        margin-left: 50px;
+    }
+
+    footer ul li {
+        display: block;
+    }
+
+    footer ul li a {
+        font-size: 1.1rem;
+        margin-right: 20px;
+    }
+
+    .wrapper p {
+        float: left;
+        margin-top: 10px;
+        margin-left: 50px;
+        margin-bottom: 10px;
+    }
+
+}
