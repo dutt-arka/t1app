@@ -12,3 +12,8 @@ Solution: I wrote the content and built the v1 for a web app.
 Hosted on GitHub Pages: https://feruxhi.github.io/t1app/
 
 ---------------------------------------------------
+## Update ( 15-4-20)
+
+Netlify link : https://newton101.netlify.com/
+
+Blockchain Course added.
